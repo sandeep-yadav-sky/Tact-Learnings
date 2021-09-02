@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins';
+// @import 'functions';
+
+body 
+{
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+  box-sizing: border-box;
+}
+
+#app
+{
+  width: 100%;
+  height: 100vh;
+  overflow:none;
+
+  background-color: rgb(240, 247, 248);
+
+  .demo-header
+  {
+    @include header;
+  }
+
+  .demo-content{
+    overflow:auto;
+    @include content;
+    @include smallSizeScreen{
+      background-color:red; 
+      flex-direction: column;
+      overflow:auto;
+    }
+    .box
+    {
+      @include block;
+      @include smallSizeScreen
+      {
+        background-color:skyblue; 
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+

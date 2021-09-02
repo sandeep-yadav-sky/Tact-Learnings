@@ -1,0 +1,39 @@
+@mixin block
+{
+      display: flex;
+      border: 1px #000000 solid;
+      padding: 10px;
+      width:200px;
+      height:50px;
+      flex-shrink: 0;
+      justify-content: center;
+      background-color: #8fd68f;
+      align-items : center;
+}
+@mixin header 
+{
+    border: 1px;
+    display: flex; 
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color:yellow;
+}
+@mixin content {
+    display: flex;
+    padding: 10px;
+    flex-wrap: nowrap;
+    // justify-content: space-around;
+    background-color: #565656;
+}
+
+@mixin smallSizeScreen{
+  @media only screen and (max-width: 600px) {
+   @content;
+  }
+}
+
+#demo{
+    background-color: black;
+}
